@@ -1,0 +1,49 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Q4.1</title>
+         <script type = "text/javascript">
+            //constructor of Person
+            function Person(name) { 
+               this.name = name; 
+            }
+            //getter of Person
+            Person.prototype.getName = function() { return this.name; }
+            
+             //constructor of Author
+            function Author(name,books){
+               Person.call(this,name);
+               this.books =books;
+            }
+           
+            
+           // Person.prototype.setName = function(name){this.name = name;}
+             //Use the constructors to create objects
+            //Set the prototype of Author to the Person object.
+            Author.prototype = new Person();
+            //uthor.prototype.constructor=Author;
+            Author.prototype.getBooks = function(){return this.books;}
+             
+            
+            //Create an object (name='John Smith') of Person class.  
+            var john =new Person("John Smith");
+            
+            //Create two objects of Author class.  Use an array to store these two objects. 
+            // The names of the two objects are 'Dustin Diaz' and 'Ross Harmes'
+            //while the books of the two objects are the same, ['JavaScript Design Patterns'].
+           var author=new Array(new Author("Dustin Diaz","JavaScript Design Patterns"),new Author("Ross Harmes","JavaScript Design Patterns"));
+            
+            
+            console.log(john.getName()); 
+            for(i=0;i<author.length;i++){
+               console.log(author[i].getName()); 
+               console.log(author[i].getBooks());
+            }
+            
+         </script>
+      </head>
+      <body>
+        
+      </body>
+   </html>

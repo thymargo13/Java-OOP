@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.1" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd">
+    <tlib-version>1.0</tlib-version>
+    <short-name>cfd</short-name>
+    <uri>/WEB-INF/tlds/cust_tag</uri>
+    <tag>
+        <name>listVerify</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowRegisteredCustomer</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show customers who are not verified</info>
+        <attribute>
+
+        </attribute>
+    </tag>
+    <tag>
+        <name>listCustomer</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowAllCustomer</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show customers and provide a link for modification</info>
+
+    </tag>
+    <tag>
+        <name>showCustomerUpdateResult</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowCustomerUpdateResult</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show the update result after they change the personal information</info>
+        <attribute>
+            <name>result</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <tag>
+        <name>showCustomerAddress</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowCustomerAddress</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show all of the customer address by the status</info>
+        <attribute>
+            <name>id</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+        <attribute>
+            <name>status</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+	<tag>
+        <name>listStaff</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowAllStaff</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show Staff and provide a link for modification</info>
+    </tag>
+    <tag>
+        <name>listOtherProduct</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowAllOtherProduct</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show Product and provide a link for modification</info>
+    </tag>
+   
+    <tag>
+        <name>listProduct</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ListProduct</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show Product and provide a link for modification</info>
+    </tag>
+    <tag>
+        <name>showHeaderIcon</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowHeaderIcon</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show the header icon by login or not</info>
+        <attribute>
+            <name>isLogined</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+	 <tag>
+        <name>listInvoice</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ListInvoice</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show Invoice and provide a link for modification</info>
+    </tag>
+    <tag>
+        <name>cart</name><!-- jsp action-->
+        <tag-class>cfd.taglib.ShowShoppingCart</tag-class><!-- call class-->
+        <body-content>empty</body-content>
+        <info>Show Shopping Cart</info>
+        <attribute>
+            <name>cartList</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    <!--
+    <tag>
+        <name>showCustomerInformation</name>
+        <tag-class>cfd.taglib.</tag-class>
+        <body-content>empty</body-content>
+        <info>Show customer detail by id</info>
+        <attribute>
+            <name>customer</name>
+            <required>true</required>
+            <rtexpvalue>true</rtexpvalue>
+        </attribute>
+    </tag>
+    -->
+</taglib>

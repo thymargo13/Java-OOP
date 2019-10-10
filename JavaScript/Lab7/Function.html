@@ -1,0 +1,34 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Function</title>
+         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+         <script type = "text/javascript">
+         var playAgain = true;
+            function multiple(){
+                var answer;
+                var number1 = Math.floor(Math.random()*9+1);
+                var number2 = Math.floor(Math.random()*9+1);
+                var RealAnswer = number1*number2;
+                var input = window.prompt("How much is "+number1+" times "+number2,"0");
+                answer = parseInt(input);
+                if(answer==RealAnswer){return true}
+                else{multiple();}
+            }
+            
+            while(playAgain){
+                multiple();
+                var play = window.prompt("Would you like to answer anouther question?(yes or no)","yes");
+                if(play == "no"){
+                    playAgain =false;
+                }
+            }
+            
+        
+         
+     </script>
+      </head>
+      <body></body>
+   </html>
+ 

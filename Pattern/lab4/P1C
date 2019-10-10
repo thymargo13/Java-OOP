@@ -1,0 +1,11 @@
+Part 1 C
+    For Factory Method, the same class creates and uses the product.
+    For Abstract Factory, the client uses the factory class to creates the product.
+    Suitable for creating a set of dependent/compatible products,
+   
+    e.g. Different taste of coke 
+         Client: Cokecola
+         Abstract Factory: CokeFactory 
+         Concrete Factory: OrginalCokeFactory and LightCokeFactory
+         Abstract Product: Coke and Can
+         Product: OrginalCokeCan, OrginalCoke ,LightCoke and LightCokeCan

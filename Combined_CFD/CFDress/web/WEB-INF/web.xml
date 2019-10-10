@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <context-param>
+        <param-name>dbUrl</param-name>
+        <param-value>jdbc:mysql://localhost:3306/cfd_db</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbUser</param-name>
+        <param-value>root</param-value>
+    </context-param>
+    <context-param>
+        <param-name>dbPassword</param-name>
+        <param-value/>
+    </context-param>
+    <session-config>
+        <session-timeout>
+            60
+        </session-timeout>
+    </session-config>
+    <!-- start of daniel's filter -->
+    <filter>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <filter-class>cfs.filter.WithoutLoginFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <url-pattern>/showCustomerInfo.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <url-pattern>/Logout</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <url-pattern>/AddAddress</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <url-pattern>/ChangePwd</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <url-pattern>/CustomerUpdate</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <url-pattern>/EditAddress</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>WithoutLoginFilter</filter-name>
+        <url-pattern>/RemoveAddress</url-pattern>
+    </filter-mapping>
+    
+    <!-- end of daniel's filter -->
+    <filter>
+        <filter-name>CMSFilter</filter-name>
+        <filter-class>cms.filter.CMSFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CMSFilter</filter-name>
+        <url-pattern>/cms/*</url-pattern>
+    </filter-mapping>
+</web-app>

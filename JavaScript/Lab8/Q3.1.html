@@ -1,0 +1,42 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Q3.1</title>
+         <script type = "text/javascript">
+            function Grandparent(name){
+               this.name = name;
+            }
+            Grandparent.prototype.getName =function(){return this.name;}
+            var elder = new Grandparent("anonymous");
+            
+            function Parent(){}
+            function Child(){}
+            
+            
+            var adult = new Parent();
+            var kid = new Child();
+            
+            adult.__proto__  = elder;
+            kid.__proto__ = adult;
+            console.log("After objects creation");
+            console.log("kid's name ="+kid.name);
+            console.log("adult.name ="+adult.name);
+           console.log("elder.name ="+elder.name);
+           
+           
+            kid.name ="Chris";
+            adult.name = "Bob";
+            elder.name ="Andy";
+            
+            console.log("After update the name objects");
+            console.log("kid's name ="+kid.name);
+            console.log("adult.name ="+adult.name);
+           console.log("elder.name ="+elder.name);
+            
+         </script>
+      </head>
+      <body>
+        
+      </body>
+   </html>

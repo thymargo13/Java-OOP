@@ -1,0 +1,31 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>An Array</title>
+         <script type = "text/javascript">
+            document.write( "<table border=1><td>Subscript</td><td>Value</td>" );
+            var mark_six = new Array(); 
+            var random;
+        
+            for(var i=0;i<6;i++){
+                var counter =0;
+                random = Math.floor(Math.random()*48+1);
+                while(counter<6){
+                    while(mark_six[counter]==random){
+                        random = Math.floor(Math.random()*48+1);
+                    }
+                    counter++;
+                }
+                mark_six[i]= random;
+                
+                document.write( "<tr><td>"+i+"</td><td>"+mark_six[i]+"</td></tr>");
+               
+            }
+     </script>
+      </head>
+      <body>
+         
+      </body>
+   </html>
+ 

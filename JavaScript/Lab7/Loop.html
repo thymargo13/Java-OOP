@@ -1,0 +1,57 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Loooooop</title>
+         <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+         <script type = "text/javascript">
+            var input, n, d;
+            var a_ans=0,b_ans=0,c_ans=0,d_ans=1;
+            input = window.prompt("Enter n:","0");
+            n= parseInt(input);
+            
+            input = window.prompt("Enter d:","0");
+            d= parseInt(input);
+            
+            //logic part a
+            for(var i = 1; i<=n ; i++){
+                a_ans += i;
+            }
+            
+            //logic part b
+            for(var i=1; i<=n;i++){
+                b_ans += (i*i);
+            }
+            
+            //logic part c
+            for(var i=0;i<=n;i++){
+                //alert("i :"+i);
+                c_ans += 1+(i*d);
+            }
+            
+            //logic part d
+            for(var i=1;i<=n;i++){
+                d_ans *=i;
+            }
+            
+            
+            //alert answer
+            alert ("part(a) "+ a_ans);
+            alert ("part(b) "+ b_ans);
+            alert ("part(c) "+ c_ans);
+            alert ("part(d) "+ d_ans);
+            
+            //logic part e 
+            for(var j=1;j<=n;j++){
+                for(var i=1;i<=j;i++){
+                    document.write(i+"*");
+                }
+                document.write("<br/>");
+            }
+            
+         
+     </script>
+      </head>
+      <body></body>
+   </html>
+ 

@@ -1,0 +1,32 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Q2</title>
+         <script type = "text/javascript">
+            
+          function Cat(name,gender){
+              this.name=name;
+              this.gender=gender;
+          }
+          
+          cat = new Cat("Thomas","male");
+          
+          document.write("Create a cat object using constructor<br>");
+          document.write('class: cat<br>cat.name: '+cat.name+
+                        '<br>cat.gender: '+cat.gender);
+            Cat.prototype.setName=function(name){this.name=name;}
+            Cat.prototype.getName=function(){return name;}
+            Cat.prototype.setGender=function(gender){this.gender=gender;}
+            Cat.prototype.getGender=function(){return gender;}
+            
+            document.write("<br>Change the properties using set Method");
+            cat.setName("Kitty");
+            cat.setGender("female");
+            document.write("<br>class: cat<br>cat.name: "+cat.name+"<br>cat.gender: "+cat.gender);
+         </script>
+      </head>
+      <body>
+        
+      </body>
+   </html>

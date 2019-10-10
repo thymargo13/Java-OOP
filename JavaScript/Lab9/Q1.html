@@ -1,0 +1,29 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Q1</title>
+         <script type = "text/javascript">
+            function expand(){
+                    var visibility = document.getElementById("List").style.visibility;
+                    if(visibility=="visible"){
+                         document.getElementById("List").style.visibility="hidden";
+                    }else{
+                        document.getElementById("List").style.visibility="visible";
+                    }
+            }
+            
+         </script>
+      </head>
+      <body>
+          <div><p onclick="expand()">Topic</p></div>
+        <div id="List" style="visibility:hidden;">
+        <ul>
+            <li>Sub topic 1</li>
+            <li>Sub topic 2</li>
+            <li>Sub topic 3</li>
+        </ul>
+        </div>
+      </body>
+   </html>  
+  

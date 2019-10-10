@@ -1,0 +1,63 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Q4.2</title>
+         <script type = "text/javascript">
+         
+         function extend(subClass, superClass) {
+            var F = function() {};
+            F.prototype = superClass.prototype;
+            subClass.prototype = new F();
+            subClass.prototype.constructor = subClass;
+            subClass.superclass = superClass.prototype;
+            if(superClass.prototype.constructor == Object.prototype.constructor) {
+              superClass.prototype.constructor = superClass;
+          }
+}
+         
+         
+         
+            
+            function Person(name) { 
+               this.name = name; 
+            }
+          
+            Person.prototype.getName = function() { return this.name; }
+            
+    
+            function Author(name,books){
+               Author.superclass.constructor.call(this,name);
+               this.books =books;
+            }
+            
+         Author.prototype.constructor = Author;
+         extend(Author, Person);
+          
+            Author.prototype.getBooks = function(){return this.books;}
+           
+            // overide the getName() method of super class
+            Author.prototype.getName = function() {
+                return  Author.superclass.getName.call(this);
+            }
+            
+          
+            var john =new Person("John Smith");
+            
+          
+           var author=new Array(new Author("Dustin Diaz","JavaScript Design Patterns"),new Author("Ross Harmes","JavaScript Design Patterns"));
+            
+            
+            console.log(john.getName()); 
+            for(i=0;i<author.length;i++){
+               console.log(author[i].getName()); 
+               console.log(author[i].getBooks());
+            }
+            
+         </script>
+      </head>
+      <body>
+        
+      </body>
+   </html>  
+  

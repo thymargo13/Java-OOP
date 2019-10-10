@@ -1,0 +1,36 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>An Operator</title>
+         <script type = "text/javascript">
+            
+            var input,radius,circleArea,sphereArea,sphereVolume;  
+            var Pi = Math.PI;  
+                
+            input = 
+               window.prompt( "Enter radius", "0" );
+   
+            
+   
+            // convert numbers from strings to float
+            radius = parseFloat(input); 
+            
+   
+            // cal area or volume
+            circleArea = Pi *radius *radius;
+            sphereArea = 4*Pi*radius*radius;
+            sphereVolume = (4/3)*Pi*radius*radius*radius;
+   
+            // display the results
+            document.write( "<h1>Calculation Result</h1>" );
+            document.write( "<table border=1><tr><td>Circle Area = "+circleArea+"</td></tr>" );
+            document.write( "<tr><td>Sphere Area = "+sphereArea+"</td></tr>");
+            document.write( "<tr><td>Sphere Area = "+sphereVolume+"</td></tr></table>" );
+            
+         </script>
+      </head>
+      <body>
+         <p>Click Refresh (or Reload) to run the script again</p>
+      </body>
+   </html>

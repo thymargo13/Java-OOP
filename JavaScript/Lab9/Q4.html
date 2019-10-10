@@ -1,0 +1,32 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Q4</title>
+         <script type = "text/javascript">
+         var json;
+            function parse(){
+                var name = document.getElementById("name");
+                var gender = document.getElementById("gender");
+                var input = document.getElementById("input").value;
+                json = JSON.parse(input);
+                name.innerHTML = json.name;
+                gender.innerHTML = json.gender;
+            }
+            function stringify(){
+                var jsonS = document.getElementById("jsonS");
+                jsonS.innerHTML = JSON.stringify(json);
+            }
+            
+         </script>
+      </head>
+      <body>
+          <button onclick="parse()">Parse JSON</button>
+        <p><input type="text" id="input"/></p>
+        <p>Name : <span id="name"></span></p>
+        <p>Gender : <span id="gender"></span></p>
+        <button onclick="stringify()">To JSON</button>
+        <p>JSON String : <span id="jsonS"></span></p>
+      </body>
+   </html>  
+  

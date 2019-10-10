@@ -1,0 +1,36 @@
+  
+   <!DOCTYPE html>
+   <html>
+      <head>
+         <title>Q3</title>
+         <script type = "text/javascript">
+            
+            var data = new Array();
+            function Add(){
+                 stack = document.getElementById("stack");
+                    var newp=document.createElement("div");
+                    newp.style.border="1px solid black";
+                    newp.style.width="50%";
+                    var newtext=document.createTextNode(document.getElementById("input").value);
+                    newp.appendChild(newtext);
+                    data.push(newp);
+                    stack.appendChild(newp);
+                  
+            }
+            
+            function Remove(){
+                var rubbish = data.pop();
+                stack.removeChild(rubbish);
+            }
+
+
+         </script>
+      </head>
+      <body>
+        <button onclick="Add()">Push</button>
+        <input type="text" id="input"></input>
+        <button onclick="Remove()">Pop</button>
+        <div id="stack"></div>
+      </body>
+   </html>  
+  
